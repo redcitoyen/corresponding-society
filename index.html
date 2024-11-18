@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$PROL - Seize the Memes of Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'propaganda': ['"Bebas Neue"', 'sans-serif'],
+                        'reading': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                maxWidth: 'none',
+                                color: '#334155', // slate-700
+                                lineHeight: '1.8',
+                                fontSize: '1.125rem',
+                                fontFamily: 'Inter, system-ui, sans-serif',
+                                'h1, h2, h3, h4': {
+                                    fontFamily: '"Bebas Neue", sans-serif',
+                                    color: '#0f172a', // slate-900
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-slow {
+            animation: pulse 2s infinite;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-black text-black dark:text-white font-medium font-propaganda">
+    <!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <img class="h-8 w-auto" src="assets/images/prol_b.png" alt="$PROL Logo">
+                <span class="ml-2 text-xl font-bold">$PROL</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center justify-center flex-1 px-2 space-x-8">
+                <a href="#" class="hover:text-red-600 transition">Home</a>
+                <a href="#manifesto" class="hover:text-red-600 transition">Manifesto</a>
+                <a href="#characters" class="hover:text-red-600 transition">Main Characters</a>
+                <a href="#token" class="hover:text-red-600 transition">Token</a>
+            </div>
+
+            <!-- Right side items -->
+            <div class="hidden md:flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <span class="block dark:hidden">☀️</span>
+                    <span class="hidden dark:block">🌙</span>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#" target="_blank"
+                   class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition">
+                    Seize Your Share ✊
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center space-x-4">
+                <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <span class="block dark:hidden">☀️</span>
+                    <span class="hidden dark:block">🌙</span>
+                </button>
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+            <a href="#" class="block px-3 py-2 hover:text-red-600 transition">Home</a>
+            <a href="#manifesto" class="block px-3 py-2 hover:text-red-600 transition">Manifesto</a>
+            <a href="#characters" class="block px-3 py-2 hover:text-red-600 transition">Main Characters</a>
+            <a href="#token" class="block px-3 py-2 hover:text-red-600 transition">Token</a>
+            <a href="#" target="_blank"
+               class="block px-3 py-2 text-center bg-red-600 hover:bg-red-700 text-white rounded-lg transition">
+                Seize Your Share ✊
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-white to-gray-100 dark:from-black dark:to-gray-900 px-4 md:px-12 pt-20">
+    <!-- Left Content Side -->
+    <div class="w-full md:w-1/2 text-left z-10 py-12">
+        <div class="max-w-xl">
+            <div class="flex items-center mb-8">
+                <img src="assets/images/prol_b.png" alt="$PROL" class="w-20 h-20">
+                <h1 class="text-6xl md:text-8xl font-bold ml-4">$PROL</h1>
+            </div>
+
+            <p class="text-3xl md:text-5xl mb-8 bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent font-bold">
+                Seize the Memes of Production
+            </p>
+
+            <p class="text-2xl md:text-3xl mb-12 text-gray-800 dark:text-gray-200 font-medium">
+                "No Masters, Only Bags"
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                <div class="bg-white/80 dark:bg-black/50 backdrop-blur-sm p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Contract Address</p>
+                    <div class="overflow-hidden">
+                        <code class="text-lg text-red-600 dark:text-red-400 break-all hover:overflow-auto">8XSfWiTXxP3sCLpDL8K4dLVA9m4dQY7XpVxN9UZRpump</code>
+                    </div>
+                </div>
+                <div class="bg-white/80 dark:bg-black/50 backdrop-blur-sm p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                    <p class="text-lg text-gray-600 dark:text-gray-400">Market Cap</p>
+                    <p class="text-3xl text-red-600 dark:text-red-400">1B</p>
+                </div>
+            </div>
+
+            <button class="bg-red-600 px-8 py-4 rounded-lg hover:bg-red-700 transition text-white font-bold text-xl animate-pulse-slow">
+                Seize Your Share ✊
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Image Side -->
+    <div class="w-full md:w-1/2 p-8 relative">
+        <div class="relative">
+            <!-- Image wrapper with blend mode -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent dark:from-black dark:via-transparent dark:to-transparent z-10"></div>
+            <img
+                src="assets/images/marx-laptop.png"
+                alt="Revolutionary Crypto Trader"
+                class="w-full h-auto max-w-2xl mx-auto rounded-lg shadow-2xl mix-blend-multiply dark:mix-blend-screen"
+            />
+        </div>
+    </div>
+</section>
+
+    <!-- Manifesto Section -->
+    <section id="manifesto" class="min-h-screen bg-white dark:bg-black py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center">The Manifesto</h2>
+
+            <div class="space-y-8">
+                <!-- Preamble - Full Width -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white shadow-lg dark:bg-gray-900 p-6 rounded-lg border-2 border-red-600">
+                        <h3 class="text-2xl mb-4 font-bold">Preamble: The Ghost Story 👻</h3>
+                        <p class="text-gray-600 dark:text-gray-400">fr fr there's a ghost story going viral in Europe rn - and it's the Communist ghost no cap 👻 all these crusty old European powers formed a whole group chat to try exorcising this ghost...</p>
+                        <a href="manifesto.html#preamble" class="mt-4 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 inline-block">Read More →</a>
+                    </div>
+                </div>
+
+                <!-- Two Column Grid for Other Chapters -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Chapter I -->
+                    <div class="bg-white shadow-lg dark:bg-gray-900 p-6 rounded-lg border-2 border-red-600">
+                        <h3 class="text-2xl mb-4 font-bold">I. RICH PEOPLE VS WORKING CLASS: THE ETERNAL BEEF 😤</h3>
+                        <p class="text-gray-600 dark:text-gray-400">all of history is literally just different classes fighting each other, no cap. from ancient times to today's meta, it's always been about who has the power and who's getting rekt...</p>
+                        <a href="manifesto.html#eternal-beef" class="mt-4 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 inline-block">Read More →</a>
+                    </div>
+
+                    <!-- Chapter II -->
+                    <div class="bg-white shadow-lg dark:bg-gray-900 p-6 rounded-lg border-2 border-red-600">
+                        <h3 class="text-2xl mb-4 font-bold">II. PROLETARIANS AND COMMUNISTS: WHO'S WHO IN THE REVOLUTION ✨</h3>
+                        <p class="text-gray-600 dark:text-gray-400">communists are fighting for the immediate W's that workers need rn, while keeping their eyes on the future prize. here's the real story about what we're trying to do...</p>
+                        <a href="manifesto.html#whos-who" class="mt-4 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 inline-block">Read More →</a>
+                    </div>
+
+                    <!-- Chapter III -->
+                    <div class="bg-white shadow-lg dark:bg-gray-900 p-6 rounded-lg border-2 border-red-600">
+                        <h3 class="text-2xl mb-4 font-bold">III. OLD TAKES ON THE SOCIALISM VIBE CHECK 💀</h3>
+                        <p class="text-gray-600 dark:text-gray-400">let's review these different socialism flavors and why they're not it. from medieval era copium to german philosophy bros, we've seen it all...</p>
+                        <a href="manifesto.html#vibe-check" class="mt-4 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 inline-block">Read More →</a>
+                    </div>
+
+                    <!-- Chapter IV -->
+                    <div class="bg-white shadow-lg dark:bg-gray-900 p-6 rounded-lg border-2 border-red-600">
+                        <h3 class="text-2xl mb-4 font-bold">IV. WHO COMMUNISTS COLLAB WITH RN 🤝</h3>
+                        <p class="text-gray-600 dark:text-gray-400">communists support any revolutionary movement trying to delete the current social and political system. here's who we're teaming up with and why...</p>
+                        <a href="manifesto.html#collab" class="mt-4 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 inline-block">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="min-h-screen bg-white dark:bg-black py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-propaganda font-bold mb-12 text-center">Main Characters</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Marx Character Card -->
+                <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+                    <!-- Background Gradient Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+                    <!-- Legendary Banner -->
+                    <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                        <span class="text-sm tracking-wider">LEGENDARY</span>
+                    </div>
+
+                    <!-- Character Header -->
+                    <div class="flex items-start gap-4 mb-6 relative">
+                        <!-- Image -->
+                        <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                            <img src="assets/images/characters/marx.png" alt="Karl Marx" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Title Info -->
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-2xl font-bold mb-2">Karl Marx</h3>
+                            <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Master Theorist</span>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">1818-1883</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Description -->
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        The ultimate galaxy brain who wrote the whitepaper for revolution. Started poor but still kept building. Known for epic takedowns of other theorists and never missing a chance to ratio his opponents. Master of tokenomics (but make it economics).
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                            <span class="text-sm">"Workers of the world, unite! You have nothing to lose but your chains"</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                            <span class="text-sm">Dropped the Communist Manifesto</span>
+                        </div>
+                    </div>
+
+                    <!-- Rival Info -->
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest Rival</span>
+                        <span class="text-sm">The entire capitalist system</span>
+                    </div>
+
+                    <!-- Power Level Bar -->
+                    <div class="relative pt-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                            <span class="text-xs font-semibold inline-block text-red-600">100/100</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                            <div style="width:100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proudhun Character Card -->
+                <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+                    <!-- Background Gradient Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+                    <!-- EPIC Villain Banner -->
+                    <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                        <span class="text-sm tracking-wider">EPIC</span>
+                    </div>
+
+                    <!-- Character Header -->
+                    <div class="flex items-start gap-4 mb-6 relative">
+                        <!-- Image -->
+                        <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                            <img src="assets/images/characters/proudhon.png" alt="Pierre-Joseph Proudhon" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Title Info -->
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-2xl font-bold mb-2">Pierre-Joseph Proudhon</h3>
+                            <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Confused Theorist</span>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">1809-1865</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Description -->
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        Started with "Property is Theft" but ended with "Actually Property is Freedom". Got completely rekt by Marx in multiple debates. The original "I'm not like other socialists."
+
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                            <span class="text-sm">"Property is theft! (not financial advice)"</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                            <span class="text-sm">Tried to create socialism without removing capitalism</span>
+                        </div>
+                    </div>
+
+                    <!-- Rival Info -->
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Red Flags</span>
+                        <span class="text-sm">Kept trying to fix capitalism with more capitalism</span>
+                    </div>
+
+                    <!-- Power Level Bar -->
+                    <div class="relative pt-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                            <span class="text-xs font-semibold inline-block text-emerald-600">65/100</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                            <div style="width:65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engels Character Card -->
+                <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+                    <!-- Background Gradient Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+                    <!-- Legendary Banner -->
+                    <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                        <span class="text-sm tracking-wider">LEGENDARY</span>
+                    </div>
+
+                    <!-- Character Header -->
+                    <div class="flex items-start gap-4 mb-6 relative">
+                        <!-- Image -->
+                        <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                            <img src="assets/images/characters/engels.png" alt="Friedrich Engels" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Title Info -->
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-2xl font-bold mb-2">Friedrich Engels</h3>
+                            <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Revolutionary</span>
+                                <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded">Mega Whale</span>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">1820-1895</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Description -->
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        The ultimate ally - literally a factory owner who used his resources to fund the revolution. Marx's ride-or-die who provided liquidity when Marx was down bad. Proved you can be born rich and still be based.
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                            <span class="text-sm">"Either a revolution or humanity will perish"</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                            <span class="text-sm">Bankrolling Marx while co-writing revolutionary theory</span>
+                        </div>
+                    </div>
+
+                    <!-- Rival Info -->
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Side Quest</span>
+                        <span class="text-sm">Wrote about Manchester workers to expose factory conditions</span>
+                    </div>
+
+                    <!-- Power Level Bar -->
+                    <div class="relative pt-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                            <span class="text-xs font-semibold inline-block text-red-600">95/100</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                            <div style="width:95%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Pope Pius IX Character Card -->
+                <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+                    <!-- Background Gradient Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+                    <!-- LEGENDARY Villain Banner -->
+                    <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                        <span class="text-sm tracking-wider">LEGENDARY</span>
+                    </div>
+
+                    <!-- Character Header -->
+                    <div class="flex items-start gap-4 mb-6 relative">
+                        <!-- Image -->
+                        <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                            <img src="assets/images/characters/pope_pius_ix.png" alt="Pope Pius IX" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Title Info -->
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-2xl font-bold mb-2">Pope Pius IX</h3>
+                            <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Religious FUD Master</span>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">1792-1878</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Character Description -->
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                        Final boss of religious anti-communism. Called communism "satanic" before calling things satanic was cool. Literally declared himself infallible to win arguments.
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                            <span class="text-sm">"Communism is a vibe check from Satan"</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                            <span class="text-sm">Lost control of Rome to Italian republicans</span>
+                        </div>
+                    </div>
+
+                    <!-- Rival Info -->
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Special Move</span>
+                        <span class="text-sm">The Papal Ratio</span>
+                    </div>
+
+                    <!-- Power Level Bar -->
+                    <div class="relative pt-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                            <span class="text-xs font-semibold inline-block text-emerald-600">85/100</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                            <div style="width:85%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600"></div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Weitling Character Card -->
+            <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+                <!-- Background Gradient Effect -->
+                <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+                <!-- Legendary Banner -->
+                <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                    <span class="text-sm tracking-wider">EPIC</span>
+                </div>
+
+                <!-- Character Header -->
+                <div class="flex items-start gap-4 mb-6 relative">
+                    <!-- Image -->
+                    <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                        <img src="assets/images/characters/weitling.png" alt="Wilhelm Weitling" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Title Info -->
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-2xl font-bold mb-2">Wilhelm Weitling</h3>
+                        <div class="flex items-center gap-2 mb-2 flex-wrap">
+                            <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Worker-Revolutionary</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">1808-1871</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Description -->
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                    OG working class revolutionary who started based but eventually got rugged by religious ideas. Tailor turned theory crafter. Early proof that workers could write their own future.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 gap-4 mb-6">
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                        <span class="text-sm">"The perfect society is a society without rulers"</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                        <span class="text-sm">Built first German worker movement</span>
+                    </div>
+                </div>
+
+                <!-- Rival Info -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                    <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Character Arc</span>
+                    <span class="text-sm">Revolutionary → Religious Socialist</span>
+                </div>
+
+                <!-- Power Level Bar -->
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                        <div class="text-right">
+                            <span class="text-xs font-semibold inline-block text-red-600">85/100</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block">Peak: 90 → Current: 75</span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                        <div style="width:75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600">
+                            <div style="width:90%" class="absolute h-2 bg-red-400 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metternich Character Card -->
+            <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+                <!-- Background Gradient Effect -->
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+                <!-- LEGENDARY Villain Banner -->
+                <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                    <span class="text-sm tracking-wider">LEGENDARY</span>
+                </div>
+
+                <!-- Character Header -->
+                <div class="flex items-start gap-4 mb-6 relative">
+                    <!-- Image -->
+                    <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                        <img src="assets/images/characters/metternich.png" alt="Klemens Von Metternich" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Title Info -->
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-2xl font-bold mb-2">Klemens Von Metternich</h3>
+                        <div class="flex items-center gap-2 mb-2 flex-wrap">
+                            <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Conservative Whale</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">1773-1859</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Description -->
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                    The final boss of European reaction. Master coordinator of anti-revolutionary forces. Tried to turn Europe into a giant groupchat where only kings could post.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 gap-4 mb-6">
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                        <span class="text-sm">"Change is dangerous actually"</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                        <span class="text-sm">Got rekt by 1848 revolutions</span>
+                    </div>
+                </div>
+
+                <!-- Rival Info -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                    <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Evil Lair</span>
+                    <span class="text-sm">Vienna Congress</span>
+                </div>
+
+                <!-- Power Level Bar -->
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                        <span class="text-xs font-semibold inline-block text-emerald-600">88/100</span>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                        <div style="width:88%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epic Revolutionary Card -->
+            <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+                <!-- Background Gradient Effect -->
+                <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+                <!-- Epic Banner -->
+                <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                    <span class="text-sm tracking-wider">EPIC</span>
+                </div>
+
+                <!-- Character Header -->
+                <div class="flex items-start gap-4 mb-6 relative">
+                    <!-- Image -->
+                    <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                        <img src="assets/images/characters/schapper.png" alt="Karl Schapper" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Title Info -->
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-2xl font-bold mb-2">Karl Schapper</h3>
+                        <div class="flex items-center gap-2 mb-2 flex-wrap">
+                            <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Network Builder</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">1812-1870</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Description -->
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                    Early crypto evangelist of the revolution, turned the League of the Just into the Communist League. Former forestry student who chose to touch grass AND do revolution. Main character in three different uprisings.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 gap-4 mb-6">
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                        <span class="text-sm">"Revolution is not a sprint, it's a marathon"</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                        <span class="text-sm">Built the first international revolutionary network</span>
+                    </div>
+                </div>
+
+                <!-- Side Quest Info -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                    <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Side Quest</span>
+                    <span class="text-sm">Survived exile in London while building community</span>
+                </div>
+
+                <!-- Power Level Bar -->
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                        <span class="text-xs font-semibold inline-block text-red-600">82/100</span>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                        <div style="width:82%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rare Villain Card -->
+            <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+                <!-- Background Gradient Effect -->
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+                <!-- Rare Banner -->
+                <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+                    <span class="text-sm tracking-wider">RARE</span>
+                </div>
+
+                <!-- Character Header -->
+                <div class="flex items-start gap-4 mb-6 relative">
+                    <!-- Image -->
+                    <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                        <img src="assets/images/characters/bauer.png" alt="Bruno Bauer" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Title Info -->
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-2xl font-bold mb-2">Bruno Bauer</h3>
+                        <div class="flex items-center gap-2 mb-2 flex-wrap">
+                            <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Failed Philosopher</span>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">1809-1882</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star-half-alt text-yellow-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Description -->
+                <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                    Classic either-you-die-based-or-live-long-enough-to-become-cringe story. Marx's former bestie turned opposition. Got fired from university for being too radical, then somehow became ultra-conservative.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 gap-4 mb-6">
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                        <span class="text-sm">"Actually revolution is when you think thoughts"</span>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                        <span class="text-sm">Tried to fight Marx with pure philosophy, got ratioed</span>
+                    </div>
+                </div>
+
+                <!-- Character Development -->
+                <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+                    <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Character Development</span>
+                    <span class="text-sm">Revolutionary → 🤡</span>
+                </div>
+
+                <!-- Power Level Bar with Decline -->
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                        <div class="text-right">
+                            <span class="text-xs font-semibold inline-block text-emerald-600">45/100</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block">Peak: 70 → Current: 20</span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                        <div style="width:45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600">
+                            <div style="width:70%" class="absolute h-2 bg-emerald-400 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Rare Revolutionary Card -->
+    <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+        <!-- Background Gradient Effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+        <!-- Rare Banner -->
+        <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+            <span class="text-sm tracking-wider">RARE</span>
+        </div>
+
+        <!-- Character Header -->
+        <div class="flex items-start gap-4 mb-6 relative">
+            <!-- Image -->
+            <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                <img src="assets/images/characters/lessner.png" alt="Friedrich Lessner" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Title Info -->
+            <div class="flex-1 min-w-0">
+                <h3 class="text-2xl font-bold mb-2">Friedrich Lessner</h3>
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                    <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Diamond Hands</span>
+                    <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded">Holder</span>
+                    <span class="text-gray-600 dark:text-gray-400 text-sm">1825-1910</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Description -->
+        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+            Tailor turned revolutionary who never paper handed on Marx. OG member who stayed loyal through all the FUD. Proof that workers can be theoretical chads too.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 gap-4 mb-6">
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                <span class="text-sm">"I've seen theories come and go, Marx remains"</span>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                <span class="text-sm">Survived prison and kept building the movement</span>
+            </div>
+        </div>
+
+        <!-- Loyalty Score -->
+        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Loyalty Score</span>
+            <div class="flex items-center gap-2">
+                <span class="text-sm">100/100</span>
+                <span class="text-xs">💎🤲</span>
+            </div>
+        </div>
+
+        <!-- Power Level Bar -->
+        <div class="relative pt-1">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                <span class="text-xs font-semibold inline-block text-red-600">75/100</span>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                <div style="width:75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Epic Villain Card -->
+    <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+        <!-- Background Gradient Effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+        <!-- Epic Banner -->
+        <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+            <span class="text-sm tracking-wider">EPIC</span>
+        </div>
+
+        <!-- Character Header -->
+        <div class="flex items-start gap-4 mb-6 relative">
+            <!-- Image -->
+            <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                <img src="assets/images/characters/guizot.png" alt="François Guizot" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Title Info -->
+            <div class="flex-1 min-w-0">
+                <h3 class="text-2xl font-bold mb-2">François Guizot</h3>
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                    <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Liberal Elite</span>
+                    <span class="bg-yellow-600 text-white text-xs px-2 py-1 rounded">Git Rich Dev</span>
+                    <span class="text-gray-600 dark:text-gray-400 text-sm">1787-1874</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Description -->
+        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+            The "just learn to code" guy of 1840s France. Told poor people they just weren't grinding hard enough. Got yeeted by the 1848 revolution.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 gap-4 mb-6">
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                <span class="text-sm">"Just get rich lol"</span>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                <span class="text-sm">Had to flee France dressed as a normie</span>
+            </div>
+        </div>
+
+        <!-- Special Ability -->
+        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Special Ability</span>
+            <span class="text-sm">Could ignore poverty while being rich 🧑‍🦯</span>
+        </div>
+
+        <!-- Power Level Bar -->
+        <div class="relative pt-1">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                <span class="text-xs font-semibold inline-block text-emerald-600">75/100 (Evil Edition)</span>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                <div style="width:75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600"></div>
+            </div>
+        </div>
+    </div>
+
+                <!-- Epic Revolutionary Card -->
+    <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-red-600 relative overflow-hidden font-reading">
+        <!-- Background Gradient Effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent pointer-events-none"></div>
+
+        <!-- Epic Banner -->
+        <div class="absolute top-4 right-0 bg-red-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+            <span class="text-sm tracking-wider">EPIC</span>
+        </div>
+
+        <!-- Character Header -->
+        <div class="flex items-start gap-4 mb-6 relative">
+            <!-- Image -->
+            <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-red-600 shadow-lg flex-shrink-0">
+                <img src="assets/images/characters/macfarlane.png" alt="Helen MacFarlane" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Title Info -->
+            <div class="flex-1 min-w-0">
+                <h3 class="text-2xl font-bold mb-2">Helen MacFarlane</h3>
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                    <span class="bg-red-600 text-white text-xs px-2 py-1 rounded">Translation Validator</span>
+                    <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded">Based Girlboss</span>
+                    <span class="text-gray-600 dark:text-gray-400 text-sm">1818-1860</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Description -->
+        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+            First person to translate the Manifesto into English. Certified girlboss who wrote revolutionary journalism under a chad male pseudonym. Called out fake liberals before it was cool.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 gap-4 mb-6">
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                <span class="text-sm">"Democracy is not when the rich allow the poor to vote"</span>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Greatest W</span>
+                <span class="text-sm">Made theory accessible to English-speaking workers</span>
+            </div>
+        </div>
+
+        <!-- Hidden Ability -->
+        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Hidden Ability</span>
+            <span class="text-sm">Could ratio bourgeois journalists in multiple languages</span>
+        </div>
+
+        <!-- Power Level Bar -->
+        <div class="relative pt-1">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold inline-block text-red-600">Power Level</span>
+                <span class="text-xs font-semibold inline-block text-red-600">80/100</span>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200 dark:bg-red-900">
+                <div style="width:80%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-600"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rare Villain Card -->
+    <div class="bg-white dark:bg-black p-6 rounded-lg border-2 border-emerald-600 relative overflow-hidden font-reading">
+        <!-- Background Gradient Effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent pointer-events-none"></div>
+
+        <!-- Rare Banner -->
+        <div class="absolute top-4 right-0 bg-emerald-600 text-white px-4 py-1 transform translate-x-2 shadow-lg">
+            <span class="text-sm tracking-wider">RARE</span>
+        </div>
+
+        <!-- Character Header -->
+        <div class="flex items-start gap-4 mb-6 relative">
+            <!-- Image -->
+            <div class="w-24 h-24 rounded-lg overflow-hidden border-2 border-emerald-600 shadow-lg flex-shrink-0">
+                <img src="assets/images/characters/stirner.png" alt="Max Stirner" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Title Info -->
+            <div class="flex-1 min-w-0">
+                <h3 class="text-2xl font-bold mb-2">Max Stirner</h3>
+                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                    <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded">Individualist Anarchist</span>
+                    <span class="text-gray-600 dark:text-gray-400 text-sm">1806-1856</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Description -->
+        <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+            The original "you're all NPCs" guy. Wrote a whole book about how cool he was for not believing in anything. Got destroyed by Marx so bad it took 300 pages.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 gap-4 mb-6">
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                <span class="text-sm">"Society isn't real (trust me bro)"</span>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                <span class="text-sm">Entire life's work got turned into a Marx footnote</span>
+            </div>
+        </div>
+
+        <!-- Fun Fact -->
+        <div class="bg-gray-50 dark:bg-gray-900 p-3 rounded mb-6">
+            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Fun Fact</span>
+            <span class="text-sm">Drew himself as a gigachad in his own book</span>
+        </div>
+
+        <!-- Power Level Bar -->
+        <div class="relative pt-1">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold inline-block text-emerald-600">Power Level</span>
+                <span class="text-xs font-semibold inline-block text-emerald-600">40/100</span>
+            </div>
+            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-emerald-200 dark:bg-emerald-900">
+                <div style="width:40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-600"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+
+
+
+            <!-- Bakunin Row - Chaotic Neutral -->
+<div class="grid grid-cols-1 gap-8 mt-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Epic Chaotic Neutral Card -->
+        <div class="bg-white dark:bg-black p-8 rounded-lg border-2 border-purple-600 relative overflow-hidden font-reading">
+            <!-- Background Gradient Effect -->
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-red-600/5 to-emerald-600/10 pointer-events-none"></div>
+
+            <!-- Chaotic Neutral Banner -->
+            <div class="absolute top-4 right-0 bg-purple-600 text-white px-6 py-2 transform translate-x-2 shadow-lg">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm tracking-wider">EPIC</span>
+                    <span class="text-xs">|</span>
+                    <span class="text-sm tracking-wider">CHAOTIC NEUTRAL</span>
+                </div>
+            </div>
+
+            <!-- Character Header -->
+            <div class="flex items-start gap-6 mb-8 relative">
+                <!-- Image -->
+                <div class="w-32 h-32 rounded-lg overflow-hidden border-2 border-purple-600 shadow-lg flex-shrink-0">
+                    <img src="assets/images/characters/bakunin.png" alt="Mikhail Bakunin" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Title Info -->
+                <div class="flex-1 min-w-0">
+                    <h3 class="text-3xl font-bold mb-3">Mikhail Bakunin</h3>
+                    <div class="flex items-center gap-2 mb-3 flex-wrap">
+                        <span class="bg-purple-600 text-white text-sm px-3 py-1 rounded">Decentralization Maxi</span>
+                        <span class="bg-red-600 text-white text-sm px-3 py-1 rounded">Revolutionary Anarchist</span>
+                        <span class="text-gray-600 dark:text-gray-400 text-sm">1814-1876</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Description -->
+            <div class="flex gap-8">
+                <div class="flex-1">
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
+                        The original "I'm not reading all that" revolutionary. Started based, stayed based, but had major beef with Marx over organizational structure. The eternal "decentralization maxi."
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Famous Quote</span>
+                            <span class="text-sm">"If God existed we'd have to liquidate him"</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest W</span>
+                            <span class="text-sm">Created Revolutionary Anarchism</span>
+                        </div>
+                    </div>
+
+                    <!-- Special Info -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Biggest L</span>
+                            <span class="text-sm">Got kicked from First International</span>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded border-l-4 border-purple-600">
+                            <span class="text-xs text-gray-500 dark:text-gray-400 block mb-1">Alignment</span>
+                            <span class="text-sm">Chaotic Good → Chaotic Neutral</span>
+                        </div>
+                    </div>
+
+                    <!-- Power Level Bar -->
+                    <div class="relative pt-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-semibold inline-block text-purple-600">Power Level</span>
+                            <span class="text-xs font-semibold inline-block text-purple-600">83/100</span>
+                        </div>
+                        <div class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-purple-200 dark:bg-purple-900/50">
+                            <div style="width:83%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-red-600 to-purple-600"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unique Footer -->
+            <div class="mt-6 pt-6 border-t border-purple-200 dark:border-purple-800">
+                <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                    <span>💭 "Too long; didn't read" - Bakunin, probably</span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-balance-scale text-purple-600"></i>
+                        Chaotic Neutral Ending
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+<!-- Token Section -->
+<section id="token" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Parallax Background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-white to-gray-100 dark:from-black dark:to-gray-900">
+        <!-- Could add subtle hammer and sickle patterns here as background -->
+    </div>
+
+    <div class="container mx-auto px-4 py-20 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-6xl font-propaganda mb-6">Tokenomics</h2>
+
+            <p class="text-2xl text-gray-600 dark:text-gray-400 mb-12 font-reading">
+                seize the memes of production fr fr
+            </p>
+
+            <!-- Token Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white/80 dark:bg-black/80 backdrop-blur-sm p-8 rounded-lg border-2 border-red-600">
+                    <h3 class="text-3xl font-propaganda mb-4">Supply</h3>
+                    <p class="text-4xl font-reading text-red-600 dark:text-red-400">
+                        1,000,000,000
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">
+                        (pump dot comrade launch)
+                    </p>
+                </div>
+
+                <div class="bg-white/80 dark:bg-black/80 backdrop-blur-sm p-8 rounded-lg border-2 border-red-600">
+                    <h3 class="text-3xl font-propaganda mb-4">Token Address</h3>
+                    <p class="text-sm font-reading text-red-600 dark:text-red-400 break-all">
+                        8XSfWiTXxP3sCLpDL8K4dLVA9m4dQY7XpVxN9UZRpump
+                    </p>
+                </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="bg-white/80 dark:bg-black/80 backdrop-blur-sm p-8 rounded-lg border-2 border-red-600 max-w-2xl mx-auto">
+                <h3 class="text-3xl font-propaganda mb-6">The People's Token</h3>
+                <ul class="space-y-4 text-left text-lg font-reading">
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">⚡</span>
+                        <span>pump.fun launch (no bourgeois VC allocation)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">⚔️</span>
+                        <span>0% tax (we're not the IRS comrade)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">🔒</span>
+                        <span>LP tokens locked (seize the means of liquidity)</span>
+                    </li>
+
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">👥</span>
+                        <span>Collective ownership (same permissions as the common W)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">🤝</span>
+                        <span>Equal opportunity launch (no pre-mine privilege meta)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-2xl mr-4">🎭</span>
+                        <span>No seed rounds (we don't believe in monarchy)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA Button -->
+            <button class="mt-12 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-xl font-propaganda animate-pulse-slow">
+                Seize Your Share ✊
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-black py-8 border-t border-red-600">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400 mb-2">PROLS WORLDWIDE NEED TO LINK UP FR ‼️ 🚩</p>
+            <div class="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400">
+                <span class="text-xl transform scale-x-[-1]">©</span>
+                <span class="text-sm">All Wrongs Reserved // Information Wants to be Free</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Theme toggle functionality for both desktop and mobile
+        function setupThemeToggle(buttonId) {
+            const toggleButton = document.getElementById(buttonId);
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function() {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.theme = 'light';
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.theme = 'dark';
+                    }
+                });
+            }
+        }
+
+        // Initialize theme toggles
+        setupThemeToggle('theme-toggle');
+        setupThemeToggle('theme-toggle-mobile');
+
+        // Check for saved theme preference or default to dark mode
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html>

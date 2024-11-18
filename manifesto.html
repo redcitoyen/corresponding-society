@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Manifesto | $PROL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Inter for body text - one of the most readable modern fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'propaganda': ['"Bebas Neue"', 'sans-serif'],
+                        'reading': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                maxWidth: 'none',
+                                color: '#334155', // slate-700
+                                lineHeight: '1.8',
+                                fontSize: '1.125rem',
+                                fontFamily: 'Inter, system-ui, sans-serif',
+                                'h1, h2, h3, h4': {
+                                    fontFamily: '"Bebas Neue", sans-serif',
+                                    color: '#0f172a', // slate-900
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom styles for reading comfort */
+        .reading-container {
+            max-width: 70ch; /* Optimal line length for reading */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-black text-black dark:text-white font-medium">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-50 font-propaganda">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-auto" src="assets/images/prol_b.png" alt="$PROL Logo">
+                    <span class="ml-2 text-xl font-bold">$PROL</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center justify-center flex-1 px-2">
+                    <a href="/" class="hover:text-red-600 transition">Home</a>
+                </div>
+
+                <!-- Right side items -->
+                <div class="hidden md:flex items-center">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                        <span class="block dark:hidden">☀️</span>
+                        <span class="hidden dark:block">🌙</span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                        <span class="block dark:hidden">☀️</span>
+                        <span class="hidden dark:block">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 pt-20">
+        <!-- Sticky Navigation -->
+        <nav class="fixed top-20 right-4 w-64 hidden lg:block font-propaganda">
+            <div class="bg-white/80 dark:bg-black/50 backdrop-blur-sm p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                <h2 class="text-lg font-bold mb-2">Chapters</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#preamble" class="hover:text-red-600 transition">Preamble: The Ghost Story 👻</a></li>
+                    <li><a href="#eternal-beef" class="hover:text-red-600 transition">I. RICH PEOPLE VS WORKING CLASS: THE ETERNAL BEEF 😤</a></li>
+                    <li><a href="#whos-who" class="hover:text-red-600 transition">II. PROLETARIANS AND COMMUNISTS: WHO'S WHO IN THE REVOLUTION ✨</a></li>
+                    <li><a href="#vibe-check" class="hover:text-red-600 transition">III. OLD TAKES ON THE SOCIALISM VIBE CHECK 💀</a></li>
+                    <li><a href="#collab" class="hover:text-red-600 transition">IV. WHO COMMUNISTS COLLAB WITH RN 🤝</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <article class="prose prose-lg dark:prose-invert max-w-none lg:pr-72">
+            <!-- Title Area -->
+            <header class="mb-16 font-propaganda">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Communist Party Manifesto</h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400">(brain rot edition, edited by the OG Friedrich Engels)</p>
+            </header>
+
+            <!-- Reading Container -->
+            <div class="bg-slate-50 dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm font-reading">
+                <!-- Preamble -->
+                <section id="preamble" class="mb-16">
+                    <h2 class="text-3xl font-propaganda mb-8">Preamble: The Ghost Story 👻</h2>
+                    <div class="space-y-6 text-slate-700 dark:text-slate-300">
+                        <p>fr fr there's a ghost story going viral in Europe rn - and it's the Communist ghost no cap 👻 all these crusty old European powers formed a whole group chat to try exorcising this ghost:</p>
+
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>the pope</li>
+                            <li>the czar</li>
+                            <li>Metternich and Guizot (name a more mid duo)</li>
+                            <li>french radicals</li>
+                            <li>german ops (aka police spies)</li>
+                        </ul>
+
+                        <p>like name ONE opposition party that hasn't been called "communist" by the powerful ones? find ONE opposition that hasn't thrown "communist" back as a drag against parties more progressive than them OR against their reactionary ops??</p>
+
+                        <p>this tea leads to two MASSIVE conclusions:</p>
+
+                        <ol class="list-decimal pl-8 space-y-2">
+                            <li>all the European powers already know Communism is actually that power fr fr 😤</li>
+                            <li>it's about time communists stop being shy and drop their own content. post the whole mission statement, goals, and general vibe check for everyone to see. time to respond to all these scary communist ghost stories with the actual communist group chat manifesto 📱</li>
+                        </ol>
+
+                        <p>so the communist squad pulled up to London from different countries and wrote this Manifesto together. it's dropping in English, French, German, Italian, Flemish and Danish</p>
+
+                        <p>(basically going viral in every language fr) ✨</p>
+                    </div>
+                </section>
+
+                <!-- Chapter I -->
+                <section id="eternal-beef" class="mb-16">
+                    <h2 class="text-3xl font-propaganda mb-8">I. RICH PEOPLE VS WORKING CLASS: THE ETERNAL BEEF 😤</h2>
+                    <div class="space-y-6 text-slate-700 dark:text-slate-300">
+                        <p>all of history is literally just different classes fighting each other, no cap.</p>
+
+                        <p>look at these squad battles through history:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>free people vs slaves</li>
+                            <li>fancy romans vs common romans</li>
+                            <li>lords vs serfs</li>
+                            <li>guild bosses vs workers</li>
+                        </ul>
+
+                        <p>basically it's always been oppressors being toxic to the oppressed</p>
+
+                        <p>this beef never stops - sometimes it's lowkey, sometimes it's straight up throwing hands. and it always ends in either:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>society getting completely rebooted</li>
+                            <li>or everyone involved getting rekt</li>
+                        </ul>
+
+                        <p>back in the day society was like a whole complicated tier list:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>ancient rome had: rich patricians, knights, regular people, slaves</li>
+                            <li>medieval times had: lords, vassals, craft masters, workers, apprentices, peasants and each of those ranks had even more sub-ranks (literally a ranked competitive system fr) 🎮</li>
+                        </ul>
+
+                        <p>modern bourgeois society spawned from feudal society's ashes but didn't fix the class beef. it just made:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>new classes</li>
+                            <li>new ways to oppress people</li>
+                            <li>new types of fights</li>
+                        </ul>
+
+                        <p>but here's what's different about our era (aka rich people era): they simplified the whole thing. society's splitting into two major opposing teams:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>the Bourgeoisie (team rich)</li>
+                            <li>the Proletariat (team workers)</li>
+                        </ul>
+
+                        <p>and that's on periodt</p>
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">here's the villain origin story of the bourgeoisie 👀</h3>
+
+                        <p>those medieval serfs leveled up into the first town citizens with actual rights. and from THOSE citizens, the first bourgeoisie started spawning (like a whole economic pokemon situation) 🔄</p>
+
+                        <p>then some MASSIVE world events dropped that gave the rising bourgeoisie their power spike:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>colonizers "finding" America (big yikes)</li>
+                            <li>boats could go around africa now</li>
+                            <li>new markets opened in india and china</li>
+                            <li>america got colonized</li>
+                            <li>trade with colonies started popping off</li>
+                            <li>more stuff to buy and sell than ever before</li>
+                        </ul>
+
+                        <p>all of this buffed:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>commerce (stonks 📈)</li>
+                            <li>navigation grind</li>
+                            <li>industry going brr</li>
+                        </ul>
+                        <p>and basically helped the revolutionary faction in that mid feudal society level up FAST.</p>
+
+                        <p>the feudal industry system was pure gatekeeping with closed guild monopolies?? but that wasn't meta anymore with these new markets wanting more. so the manufacturing update dropped instead.</p>
+
+                        <p>the patch notes were wild fr fr:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>guild masters got ratioed by manufacturing middle class</li>
+                            <li>instead of different guilds doing different things, single workshops started splitting up the labor</li>
+                            <li>no more "this guild does this, that guild does that" meta</li>
+                        </ul>
+
+                        <p>but the markets kept growing and demand went astronomical. manufacturing couldn't handle the pressure. then steam power and machines entered the chat and revolutionized everything 🏭</p>
+
+                        <p>manufacturing got replaced by this absolute unit called Modern Industry, and the manufacturing middle class? replaced by industrial millionaires commanding whole armies of workers - the modern bourgeois faction spawned and immediately started being toxic fr fr.</p>
+
+                        <p>modern industry created a worldwide market (america's discovery was the beta test). this global market made trade, shipping, and land travel go absolutely feral:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>industry leveled up</li>
+                            <li>commerce expanded the map</li>
+                            <li>navigation unlocked new routes</li>
+                            <li>railways started going brr</li>
+                        </ul>
+                        <p>= bourgeoisie faction getting more stacked, farming capital, and basically spawn camping every medieval class until they rage quit 💀</p>
+                        <p>so basically the modern bourgeoisie is what happens when you stack enough development buffs and revolution patches to the production and exchange systems no cap.</p>
+
+                        <p>and every time industry, trade, shipping, and railways expanded, rich people meta kept getting a political power spike too. their progression timeline looking like:</p>
+
+                        <div class="pl-8">
+                            <p class="mb-4">started as bottom tier getting rekt by feudal nobility</p>
+
+                            <p class="mb-4">grinded up to armed self-governing squad in medieval communes</p>
+
+                            <div class="mb-4">
+                                <p class="mb-2">split into different builds:</p>
+                                <ul class="list-disc pl-8 space-y-2">
+                                    <li>independent city republic build (Italy/Germany server)</li>
+                                    <li>monarchy's taxable "third estate" build (France server)</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="mb-2">during manufacturing patch:</p>
+                                <ul class="list-disc pl-8 space-y-2">
+                                    <li>played both sides against nobility</li>
+                                    <li>became the foundation support for big monarchies</li>
+                                </ul>
+                            </div>
+
+                            <p>finally hit endgame with Modern Industry + world-market combo = secured that exclusive political power in modern representative State</p>
+                        </div>
+
+                        <p class="pt-4">fr fr the modern State's executive branch is just the bourgeoisie's discord mod team managing their common Ls and Ws.</p>
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Revolutionary Player Meta 🎮</h3>
+
+                        <p>no cap the bourgeoisie has been the most revolutionary player in the game's history so far.</p>
+
+                        <p>whenever the bourgeoisie hits max level, they straight up delete all the feudal, patriarchal, and wholesome relationship files fr fr. no cap they just ctrl+alt+deleted all those fancy feudal connections binding people to their "natural superiors" and replaced the whole social network with one thing: cold hard cash and pure self-interest vibes 💀</p>
+
+                        <p>they took:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>religious hype</li>
+                            <li>knight energy</li>
+                            <li>basic emotional connections</li>
+                        </ul>
+                        <p>and threw them all in the recycle bin of selfish calculations fr fr ❌</p>
+
+                        <p>they nerfed personal value into pure exchange value. instead of all those different types of freedom builds that actually worked, they installed one broken mechanic: Free Trade (major L). basically they took exploitation (previously running religious and political skins) and made it raw, naked, brutal exploitation with zero cosmetics.</p>
+
+                        <p>bourgeoisie went and removed admin privileges from every respected career build:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>doctors</li>
+                            <li>lawyers</li>
+                            <li>priests</li>
+                            <li>poets</li>
+                            <li>scientists</li>
+                        </ul>
+                        <p>all got demoted to paid wage worker status, no cap.</p>
+
+                        <p>they even ratio'd the family system - ripped away all the emotional textures and downgraded family relationships to pure monetary transactions</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Perpetual Update Cycle 🔄</h3>
+
+                        <p>low key the rich exposed themselves showing how their medieval flex of being super aggro somehow made everyone else mega lazy 💀 they stay acting like they did something groundbreaking tho. ngl they built different - made stuff way crazier than those pyramid schemes, roman water yeet machines, and those churches that were doing too much. they went so hard their little adventures made everyone else's old migration patterns look basic af.</p>
+
+                        <p>these rich folks can't even exist without constantly upgrading their production game fr fr. like, they HAVE to keep changing how everything works and that means society's whole vibe keeps shifting. meanwhile all those old timey worker fams were just trying to keep things exactly how they were, no changes needed. but these corporate overlords? they stay messing with the production line, making everything unstable and chaotic - literally cannot chill for one second smh. it's giving major different energy from how things used to be.</p>
+
+                        <p>everything that used to be set in stone? yeet. all those crusty old traditions and opinions everyone thought were facts? straight up deleted. and whenever something new comes along it's already giving outdated before anyone can even post about it. everything solid just poofs into thin air like it's being thanos snapped, everything sacred gets ratio'd, and humans finally gotta face the real tea about their lives and how they connect with other people - no filters.</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Global Server Expansion 🌐</h3>
+
+                        <p>the rich taking their whole "must expand markets" thing way too seriously rn - literally speed running across the entire planet 💀 they got that "gotta catch em all" mindset, tryna set up shop and make connections everywhere like it's some global networking speedrun challenge.</p>
+
+                        <p>these corporate overlords went and made everything worldwide with their market shenanigans ong. production and buying stuff? totally globalized now. the haters stay mad but facts don't care - they yanked the whole national foundation right out from under manufacturing. all those old school industries getting rekt daily, replaced by new ones that got nations fighting for their lives to keep up. and these new industries? they're not even using local materials anymore, they're reaching across the whole map for resources like they're playing some resource management sim.</p>
+
+                        <p>everything they make gets consumed literally everywhere - local markets are so last season. instead of being satisfied with what's made nearby, everyone's got cravings for stuff from the other side of the planet fr. that old "we keep to ourselves" energy? completely ghosted. now everyone's all up in everyone else's business - every nation depends on every other nation and that's just how it be.</p>
+
+                        <p>and it's not just about physical stuff either - it's big brain time too. when someone comes up with smart ideas in one place, those ideas belong to everyone now. can't even be narrow-minded about your own country anymore - that's cringe. instead of having separate literature for every nation, we're getting this whole worldwide library situation.</p>
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Forced Tutorial Phase 🎮</h3>
+
+                        <p>these corporate overlords stay upgrading their production tech and communication speedruns so fast they're dragging literally everyone into their version of being "civilized" smh. their cheap stuff hits harder than any weapon - straight up demolishing barriers like they're playing minecraft. even the most anti-foreigner crowds end up folding when those low prices come through 💀</p>
+
+                        <p>they got every nation in a chokehold fr - either join their production style or get deleted from the game. they're like "time to get civilized" but what they really mean is "become exactly like us or else." basically creating a whole world that's just a copy-paste of themselves.</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Urban Meta Takeover 🏙️</h3>
+
+                        <p>rich folks really said "rural areas? mid" and made everything about cities. built these massive urban zones, pulled everyone from the countryside into their concrete jungle meta. acting like they saved people from some NPC farming lifestyle tbh. now the countryside can't even function without cities anymore - it's giving dependent relationship vibes. same energy with how they made less developed nations rely on the "civilized" ones, peasant countries simping for bourgeois nations, and the East getting carried by the West.</p>
+
+                        <p>the rich really speedrunning the elimination of scattered populations and resources fr. they said "time to consolidate everything" and straight up compressed all production and property into their tiny squad's inventory. and ofc that made politics go full centralized mode too 💀</p>
+
+                        <p>all those independent provinces with their own unique gameplay mechanics? nah fam. got merged into one mega server with shared rules, one government, one law system, and one class interest - everything standardized like they're playing on default settings.</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The OP Production Stats 📈</h3>
+
+                        <p>in just a century these corporate overlords created more production power than literally everyone before them combined - that's actually kinda cracked. they really went and:</p>
+
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>made nature their personal resource farm</li>
+                            <li>spawned machines everywhere</li>
+                            <li>yeeted chemistry into farming and factories</li>
+                            <li>built boats that don't need wind</li>
+                            <li>dropped railways everywhere</li>
+                            <li>invented electric messaging</li>
+                            <li>terraformed whole continents</li>
+                            <li>made rivers do what they want</li>
+                            <li>spawned whole populations like they got creative mode enabled</li>
+                        </ul>
+
+                        <p>like which past generation could even imagine these production stats were possible? absolutely zero of them.</p>
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">When The Code Starts Breaking 🐛</h3>
+
+                        <p>but plot twist: all these production methods the rich used to level up? they originally came from feudal society's tech tree. at some point tho, the feudal gameplay mechanics couldn't handle these new production methods - straight up became debuff status effects. those old feudal property rules were basically running on legacy code that needed to get deleted. and deleted they got.</p>
+
+                        <p>free competition said "it's my turn on the xbox" and rolled up with its whole political setup buffing the rich squad's power levels.</p>
+
+                        <p>and rn? same energy happening irl. modern rich society with all its production and trade mechanics summoned these absolute unit production methods but they're giving major sorcerer's apprentice vibes - can't even control the power they unlocked 💀</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Crisis Events Keep Spawning 🌋</h3>
+
+                        <p>for decades the whole industry storyline has just been these new production methods throwing hands with modern production rules - especially the property rules that let the rich stay in power. just look at those economic crisis events that keep spawning more often, each time threatening to delete the whole rich society from existence.</p>
+
+                        <p>during these crisis events? massive chunk of products get thrown in the trash, even the machines that make them get destroyed. and the most cursed part? there's literally TOO MUCH stuff being made - that would've been considered actual brain damage in earlier times. society suddenly gets hit with that temporary barbarism debuff, acting like some mega famine or war just nuked all the resources. industry and trade looking absolutely rekt... and for what? because everything's TOO advanced, TOO many resources, TOO much industry, TOO much trade happening.</p>
+
+                        <p>all these production methods aren't even helping rich property rules anymore - they're way too OP for the current meta. when they break free from these limits they cause total chaos in rich society, putting rich property rights in danger mode. rich society's rules are too smol brain to handle all this wealth they created.</p>
+
+                        <p>and how do the rich deal with these crisis events? toxic strat fr:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>straight up destroying tons of production power</li>
+                            <li>finding new markets to exploit</li>
+                            <li>grinding the old markets even harder</li>
+                        </ul>
+                        <p>basically setting up even bigger and more destructive crisis events later while making it harder to prevent them. absolute smooth brain moves tbh.</p>
+
+                        <p class="italic font-medium">plot twist: those same weapons the rich used to 360 no-scope feudalism? now getting turned against them 💀</p>
+
+                        <div class="space-y-6 text-slate-700 dark:text-slate-300">
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Working Class Faction Spawns 👥</h3>
+
+                            <p>but wait there's more - the rich didn't just craft weapons for their own game over, they literally spawned the players who gonna use them: the working class squad aka the proletarians.</p>
+
+                            <p>every time the rich level up their capital, they also level up the working class - except these players only stay alive if they can find work, and only find work if they make the rich richer. mega cursed setup tbh. workers gotta sell themselves piece by piece like they're items in the shop, getting hit with all that competition RNG and market changes.</p>
+
+                            <p>thanks to all these machines and divided labor meta, working just lost all its character customization options - totally boring for the workers now. they basically became machine DLC, only needing the most basic button-mashing skills. that's why a worker's production cost is basically just whatever keeps them alive and lets them have kids to make more workers later.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Pay-to-Win Meta Gets Worse 💰</h3>
+
+                            <p>and here's the real toxic part: item price equals production cost, and that includes labor too. so the more soul-crushing the work gets, the less money workers make 💀 and it gets worse - more machines and divided labor = more grinding required. longer work hours, more tasks per hour, faster machines - straight up getting spawn camped by the grind.</p>
+
+                            <p>modern industry really said "small workshop? cringe" and transformed everything into these mega factories. workers get packed in there like they're in some twisted battle royale map, organized like an NPC army with try-hard managers as their squad leaders.</p>
+
+                            <p>these players aren't just getting owned by the rich class and their pay-to-win state - they're getting spawn camped 24/7 by machines, supervisors, and especially those factory owner whales. and the more these owners flex about making bank being their only goal, the more toxic and rage-inducing the whole setup gets 💀</p>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                                <p class="font-medium">here's the real meta shift:</p>
+                                <ul class="list-disc pl-8 space-y-2 mt-4">
+                                    <li>as jobs need less actual skill and strength (aka as industry gets more OP), they start replacing male workers with anyone else</li>
+                                    <li>age and gender straight up stopped mattering for the working class</li>
+                                    <li>everyone's just seen as tools with different price tags based on their stats</li>
+                                </ul>
+                            </div>
+
+                            <p>and the moment workers escape the factory owner's exploitation by getting their cash drops, they get jumped by the rest of the rich squad - landlords, shop owners, and those predatory loan sharks all wanting their share of the loot.</p>
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Middle Class NPCs Getting Deleted 📉</h3>
+
+                            <p>meanwhile the middle class NPCs - small business owners, shop runners, retired merchants, craft workers, and farmers - they're all slowly falling into the working class faction. either their tiny bank accounts can't keep up with modern industry's expensive meta, or they get ratio'd by the mega corporations. plus all their "specialized skills" become worthless against the new production strats. working class keeps getting new players drafted from literally every other class fr.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">Early Game Working Class Strats 🎮</h3>
+
+                            <p>working class players started beefing with the rich squad from day one fr. their character progression be wild tho 💀</p>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                                <p class="font-medium mb-4">Level progression looking like:</p>
+                                <ol class="list-decimal pl-8 space-y-2">
+                                    <li>level 1 starts with solo players throwing hands</li>
+                                    <li>then whole factory teams join the fight</li>
+                                    <li>then everyone in the same job type in one area pulls up to ratio the rich player who's directly farming them for xp</li>
+                                </ol>
+                            </div>
+
+                            <p>but these noobs aren't even targeting the right thing - instead of attacking the rich's production methods, they're out here rage quitting on the machines themselves. destroying imported items that compete with their work, smashing equipment, setting factories on fire - trying to force reset the game back to medieval server settings.</p>
+
+                            <p>at this point the working class is basically playing solo battle royale, scattered everywhere and getting griefed by their own competition meta. when they do make squads, it's not even their own strat - it's the rich players forcing them to group up for their own political speedruns. rich squad can still control these movements rn bc they're the only ones who know the meta.</p>
+
+                            <p>so these working class players aren't even fighting their actual opponents yet - they're just being used as NPCs in the rich squad's fights against:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>leftover monarchy players</li>
+                                <li>landlord mains</li>
+                                <li>non-factory owner rich players</li>
+                                <li>small business try-hards</li>
+                            </ul>
+
+                            <p class="italic">whole game basically being speedrun by the rich rn - every dub counts as their victory royale.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Power Spike Incoming 📈</h3>
+
+                            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                                <p class="font-medium">but plot twist: as industry keeps leveling up, working class squad isn't just getting more players - they're forming bigger teams and getting mad gains on their power stats. and they're starting to realize they're actually OP 💀</p>
+                            </div>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Meta Starts Shifting 🔄</h3>
+
+                            <p>machines keep making all jobs basically the same copy-paste gameplay and nerfing everyone's wages to rock bottom, so working class players' builds are getting more and more similar. meanwhile the rich players keep fighting each other, causing these economic crisis events that make wages more RNG than gacha games.</p>
+
+                            <p>machines keep getting buffed way too fast, making workers' survival chances straight up pepega. and what started as 1v1s between workers and rich players is now looking like full-on faction warfare.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">Guild Alliances Form 🤝</h3>
+
+                            <p>so the workers start forming these guild alliances (trade unions) to counter the rich squad's meta. they're teaming up to stop wage nerfs and creating permanent party finder groups for when they need to raid. sometimes these fights turn into straight up PvP events.</p>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                                <p>workers catch some dubs here and there but it's temporary content fr. the real achievement isn't even the immediate loot - it's that workers keep expanding their alliance network. modern industry actually helped them here by adding better communication features so workers from different map locations can coordinate.</p>
+                            </div>
+
+                            <p>this is the network diff they needed to turn all these scattered local beefs into one massive class vs class battle royale. and every class battle is automatically political pvp. medieval workers needed centuries to build alliances with their scuffed transportation tech, but modern workers? they got railways and did it in a few years - absolutely cracked.</p>
+
+                            <p>working class players keep trying to organize into one mega faction and political party but their own competition mechanics keep griefing their progress. still, they keep respawning stronger each time, like some raid boss that just won't stay down 💀 they even exploit the rich squad's internal drama to force new worker protection patches - like that 10-hour workday update in England.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">Unexpected Alliance Buffs 📈</h3>
+
+                            <p>these faction wars from the old meta are actually helping level up the working class fr. the rich squad's been stuck in permanent PvP mode:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>first against the aristocracy mains</li>
+                                <li>then against other rich players whose builds got nerfed by industry updates</li>
+                                <li>and always beefing with rich players from other servers</li>
+                            </ul>
+
+                            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                                <p class="mb-4">during all these fights they gotta ask the working class for carry, dragging them into political pvp. the rich literally handing workers the tutorial on political warfare and general knowledge - basically giving them the weapons to get ratio'd later 💀</p>
+
+                                <p>and remember that industry progress keeps yeeting whole sections of the ruling class into working class faction? or at least putting their existence builds in danger? these former rich players dropping mad knowledge and progress buffs for the working class.</p>
+                            </div>
+
+                            <p>when the class war hitting different and about to reach its final boss battle, the ruling class and basically the whole society starts glitching so hard that some rich players actually rage quit their faction and join the revolutionary squad - the ones who got next season's battle pass on lock 💀</p>
+
+                            <p>it's giving same energy as when some nobility players switched teams to join the rich faction back in the day. now some rich players (especially those big brain theory crafters who understood the whole meta) are switching to working class team.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">Working Class: The True Revolutionary Build 💯</h3>
+
+                            <p>out of all the classes trying to 1v1 the rich faction rn, working class is the only one actually running revolutionary strats fr. other classes just keep getting nerfed and deleted by modern industry updates while the working class is literally industry's main character arc.</p>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                                <p class="font-medium mb-4">The Other Classes' Failed Strats:</p>
+                                <p>middle class players, small business mains, shop owners, craft builds, and farmer mains - they all fighting the rich squad just to avoid getting their middle class faction deleted. they're not even trying to change the meta, just trying to save their current builds from getting patched out. major L tbh - they're actually trying to rollback the game to previous versions 💀</p>
+                                <p class="mt-4">if they do run revolutionary strats, it's only bc they know they're about to get demoted to working class anyway. they're not defending their current gameplay, just preparing for their future build.</p>
+                            </div>
+
+                            <p>that "dangerous class" faction tho? those AFK players getting carried at the bottom of old society's leaderboard? they might get swept into working class revolution here and there, but their gameplay usually sets them up to be perfect for getting bribed into running ops against the revolution.</p>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Final Meta Shift 🔄</h3>
+
+                            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 space-y-4">
+                                <p>working class players got their whole game experience so messed up, it's already deleted most features from the old meta:</p>
+                                <ul class="list-disc pl-8 space-y-2">
+                                    <li>no property in their inventory</li>
+                                    <li>family mechanics completely different from rich players' version</li>
+                                    <li>industrial grind + cash shop meta is the same copy-paste whether they're playing on English, French, American or German servers</li>
+                                </ul>
+                                <p class="mt-4">laws, morality systems, religion mechanics? working class sees them as rich player propaganda with rich player buffs hiding in the code 💀</p>
+                            </div>
+
+                            <p>every class that got the high score before tried to make their resource farming methods the default server settings. but working class can't become admins of society's production system without completely deleting their own farming methods - and that means every other farming method gets wiped too. they got zero items to protect or buff - their whole questline is about destroying all the old save files that protected individual property builds.</p>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                                <p>all the previous meta shifts were just minority player movements or minority interest patch notes fr. but working class movement? that's the majority playerbase finally realizing they can coordinate and run strats for the majority's benefit.</p>
+                                <p class="mt-4">working class faction is literally bottom tier in current patch, but when they start moving up, they're gonna yeet every tier above them straight into space.</p>
+                            </div>
+
+                            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Final Boss Fight Approaches 🎮</h3>
+
+                            <p>rn tho the working class vs rich squad fight still looks like server vs server combat on the surface. each server's working class gotta ratio their own rich players first before going global.</p>
+
+                            <p>checking out the working class progression arc fr, it's been tracking this lowkey civil war in society until it finally pops off into a straight up revolution - when working class throws the rich squad into uninstall mode and takes over the server meta 💀</p>
+
+                            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                                <h4 class="font-propaganda text-xl mb-4">The Final Patch Notes 📝</h4>
+                                <p class="mb-4">every society build so far has been running on these oppressor vs oppressed faction wars. but to keep oppressing a faction, gotta give them enough resources to at least keep respawning. like serfs back then could level up to commune membership, and small business players under feudal admin permissions could grind their way to rich status.</p>
+                                <p class="mb-4">but modern workers? industry progress making them fall through the map fr - going below their own class's minimum survival requirements. they speedrunning poverty faster than population and wealth can stack.</p>
+                                <p class="font-medium">and here's the real tea: rich squad clearly can't handle admin permissions anymore if they can't even keep their NPCs alive enough to farm them. society's had enough of these patch notes - rich faction's existence is basically a skill issue for everyone now.</p>
+                            </div>
+
+                            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                                <h4 class="font-propaganda text-xl mb-4">GG No Re 🎯</h4>
+                                <p>rich class needs two things to keep existing and running things: stacking capital and making it bigger. capital needs wage-labor mechanic, and wage-labor only works when workers have to compete. but industry (which rich squad accidentally kept buffing) replacing worker competition with worker coordination through these alliance systems.</p>
+                                <p class="mt-4 font-medium">so modern industry development straight up deleting the foundation rich players use to farm and distribute loot. basically rich squad's biggest achievement was creating the players who gonna delete them from the game 💀 their rage quit and working class victory? literally in the patch notes already fr.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section id="whos-who" class="mb-16">
+                    <h2 class="text-3xl font-propaganda mb-8">II. PROLETARIANS AND COMMUNISTS: WHO'S WHO IN THE REVOLUTION ✨</h2>
+                    <div class="space-y-6 text-slate-700 dark:text-slate-300">
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">Squad Check: The Starting Lineup 💯</h3>
+
+                        <p>so what's the sitch between the communists and the whole working class squad? let's spill the tea rn.</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">ngl, communists aren't trying to be that one main character who starts their own separate party from other working class crews. they're not giving "pick me" vibes at all.</p>
+                            <p>the vibes they're chasing? literally the same as everyone else in the working class, nothing extra. like, they're not trying to create their own aesthetic or whatever for the working class movement.</p>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Difference Check ✨</h3>
+
+                        <p>here's the ✨difference check✨ between communists and other working class crews:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>when workers from different countries are fighting their battles, communists are like "hold up, we need to focus on what's good for EVERYONE" (idc what country you're from, we're all in this together rn)</li>
+                            <li>every time the working class has to level up in their fight against the rich npcs, communists are there keeping it 100 about what's good for the whole movement</li>
+                        </ul>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                            <p class="font-medium mb-4">so low key, communists are like that friend in the group project who:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>actually does the work and keeps it real (that's the practical side)</li>
+                                <li>been studying the gameplay mechanics since day 1 (that's the theory side)</li>
+                            </ul>
+                        </div>
+
+                        <p>they understand the whole vibe check of where this movement is headed and what we need to do to get that w. living rent-free in their heads? the complete understanding of how this working class movement needs to go down.</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Main Quest Objectives 🎮</h3>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="font-medium mb-4">so what's the main quest objective for communists rn? same thing all working class players are trying to do:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>get the working class to team up fr</li>
+                                <li>take down the rich players who've been camping all the resources</li>
+                                <li>secure that political power for the working class team 👊</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Property Patch Notes 📝</h3>
+
+                        <p>and btw the communist strategy guide isn't just some random theory someone made up in their notes app. like fr fr it's just explaining what's already going down irl - the whole class war thing that's literally happening rn, no cap.</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">changing up who owns what isn't just a communist thing ✨ it's giving history repeating itself. property rules keep getting patched throughout history whenever the meta changes.</p>
+                            <p>take the french revolution for example - they said "bye bestie" to the whole feudal property system and dropped in this new bourgeois property system instead.</p>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Real Tea About Communism ☕</h3>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                            <p>so here's the real tea about communism - it's not about getting rid of ALL property. it's specifically about getting rid of bourgeois property. like, the way rich players own stuff rn is literally the final boss version of a system that's all about:</p>
+                            <ul class="list-disc pl-8 space-y-2 mt-4">
+                                <li>having different classes fight each other</li>
+                                <li>letting a small squad exploit everyone else's gameplay</li>
+                            </ul>
+                        </div>
+
+                        <p class="font-medium">tldr for the whole communist theory: delete private property from the game 💀</p>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Property Drama Explained 🎭</h3>
+
+                        <p>ppl keep coming at communists like "omg you're trying to steal everyone's hard-earned loot!" they're saying we want to yeet away people's right to own stuff they worked for - you know, the stuff that supposedly lets everyone be their own main character and do their own thing.</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">and we're like "hold up" 🤨</p>
+                            <p>you mean the stuff owned by small business owners and farmers? that kind of property that existed before the rich players took over? bestie, we don't even need to touch that - the industrial revolution update already nerfed it into oblivion and keeps nerfing it every patch.</p>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Capital Gameplay Loop 🔄</h3>
+
+                        <p>let's get real - does working for wages get you any property? absolutely not. it just creates more capital (aka that special type of property that exploits workers for xp), and it only levels up by finding more workers to exploit.</p>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                            <p class="mb-4">property rn is literally just rich players and workers fighting each other. let's break down this toxic gameplay loop:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>being a capitalist isn't just about having your own personal loadout - it's about having a whole special status in how things get made</li>
+                                <li>capital isn't just some random item drop - it's what happens when everyone in society grinds together</li>
+                                <li>fr fr, capital isn't just someone's personal power-up. it's a whole society buff that got stolen by a few players 💯</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Wage System Exposed 💰</h3>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p>now let's talk about wages fr fr.</p>
+                            <p class="mt-4">the average wage is literally just the bare minimum needed to keep existing as a worker. whatever workers get from their work is just enough to stay alive and keep working.</p>
+                        </div>
+
+                        <p>like rn it's giving:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>in today's society: living workers are just xp farms for dead labor</li>
+                            <li>in communist society: dead labor is just a resource to help living workers level up</li>
+                        </ul>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                            <p>in today's meta, the past controls the present. but in communist society? the present controls the past. rn capital gets to be the main character while actual living people are just npcs with no personality 🚫</p>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Freedom Debate 🎭</h3>
+
+                        <p>and when we say we're gonna delete this whole system, rich players are like "omg you're destroying freedom and individuality!" and yeah, we are - we're destroying THEIR version of freedom and individuality. their "freedom" to exploit everyone else? that's getting nerfed fr.</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">when they talk about "freedom" in today's economy, they just mean buying and selling whatever they want. like that's their whole aesthetic ✨</p>
+                            <p>but if buying and selling gets deleted, obviously that type of freedom goes too. all their talk about market freedom only made sense compared to the medieval times trading restrictions.</p>
+                        </div>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                            <p>"omg you're trying to delete private property!" they say with their whole chest. but check the stats - in today's world, 90% of people don't even have private property 💀</p>
+                            <p class="mt-4">straight up: yes, we're coming for your property.</p>
+                        </div>
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Family System Update 👨‍👩‍👧‍👦</h3>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">"omg they're trying to destroy the family!" watch everyone lose it over this take 💀</p>
+                            <p>but what's today's family built on? money and profit. the perfect nuclear family only exists for rich folks anyway. meanwhile poor people can barely keep their families together, and some people have to sell themselves just to survive.</p>
+                        </div>
+
+                        <p>when capital goes away, this whole fake family system will disappear too. it's giving "house of cards" energy.</p>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                            <p class="mb-4">"so you want to stop parents from exploiting their kids?" yeah actually, guilty as charged ✨</p>
+                            <p>and all their fake deep talk about family values and education hits different when you realize modern industry is out here:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>tearing poor families apart</li>
+                                <li>turning kids into products</li>
+                                <li>making children work like they're in some victorian era throwback 🤧</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Partner-Sharing Drama 💔</h3>
+
+                        <p>"omg these communists want to share everyone's partners!" the rich folks scream in unison like it's a tiktok trend 💀</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">here's the real tea ✨ these rich folks already:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>treat workers' families like their personal playground</li>
+                                <li>hire people for "services"</li>
+                                <li>spend their time trying to get with each other's partners</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The National Identity Discussion 🌍</h3>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                            <p>"these communists want to delete all countries and national identity!" 💀</p>
+                            <p class="mt-4">but check this - workers don't even have a country rn. you can't take away something that doesn't exist.</p>
+                        </div>
+
+                        <p>all these differences between nations are already fading away because of:</p>
+                        <ul class="list-disc pl-8 space-y-2">
+                            <li>rich people doing their thing</li>
+                            <li>global trade being everywhere</li>
+                            <li>everyone making stuff the same way</li>
+                            <li>people living similar lives worldwide ✨</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Revolution Roadmap 🗺️</h3>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="font-medium mb-4">different places will do different things, but in the most developed countries, here's the basic checklist ✨</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>delete private land ownership - all rent money goes to public stuff</li>
+                                <li>make rich people actually pay taxes (like fr the more you make the more you pay)</li>
+                                <li>no more passing down massive wealth to your kids</li>
+                                <li>take stuff from people who dip out or try to fight back</li>
+                                <li>government runs all the banks and credit - no more private bank era</li>
+                                <li>government controls all transportation and communication</li>
+                                <li>government owns the factories and production stuff + fixes up unused land and makes soil better (environmental W)</li>
+                                <li>everyone's gotta work - set up organized work groups especially for farming</li>
+                                <li>mix up farming and factory work + spread people out so there's less difference between city and country life</li>
+                                <li>free school for everyone + no more kids working in factories + mix education with learning actual job skills</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">The Endgame 🎮</h3>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                            <p class="mb-4">so here's how it plays out:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>workers have to organize as a group bc that's their only option</li>
+                                <li>they do a revolution and become the ones in charge</li>
+                                <li>they delete the old way of making things</li>
+                                <li>this automatically deletes class differences</li>
+                                <li>which means they also delete their own position as the ruling class</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="font-medium">instead of today's society with its different classes always fighting, there'll be a new setup where everyone can grow and thrive. the plot twist? when each person gets to develop freely, that actually helps everyone else develop freely too ✨</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="vibe-check" class="mb-16">
+                    <h2 class="text-3xl font-propaganda mb-8">III. OLD TAKES ON THE SOCIALISM VIBE CHECK 💀</h2>
+                    <div class="space-y-6 text-slate-700 dark:text-slate-300">
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">A. Medieval Era Socialism: The Throwback Edition 🏰</h3>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">so here's the tea about these old rich nobles from france and england they started writing spicy posts against modern rich society after taking some massive Ls.</p>
+                            <p>they got ratio'd in the french revolution of 1830 and during english reforms. after that, they couldn't even compete in politics anymore - all they had left was writing think pieces 📝</p>
+                        </div>
+
+                        <p>to get people in their feels, these nobles had to pretend they didn't care about their own interests. instead they were like "omg we're just worried about the poor exploited workers" while secretly trying to get revenge by roasting their new rich overlords and sliding into their dms with doomer predictions</p>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                            <p class="mb-4">and that's how feudal socialism was born. it was giving:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>half crying about the past</li>
+                                <li>half throwing shade</li>
+                                <li>half echoing old times</li>
+                                <li>half threatening about the future (yes that's too many halves but so was their math)</li>
+                            </ul>
+                        </div>
+
+                        <p>sometimes they'd actually land a hit on the rich with their spicy takes, but it was always cringe because they just didn't understand how modern history works 🎭</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p>in real life these nobles:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>help oppress workers</li>
+                                <li>act fancy but still grab that industry money</li>
+                                <li>trade their whole moral code for cash from wool, sugar, and potato vodka 💸</li>
+                            </ul>
+                        </div>
+
+                        <p>and ofc religious socialism tagged along with feudal socialism like a church following its landlord bestie.</p>
+
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                            <p>it's literally so easy to make christianity sound socialist. like hasn't christianity been against private property, marriage, and government? didn't it push charity, poverty, being single, and living that monastery life instead? religious socialism is just nobles being sad but with holy water sprinkled on top ✝️</p>
+                        </div>
+
+                        <h3 class="text-2xl font-propaganda mt-12 mb-6">B. Middle Class Wannabe Socialism: The Try-Hard Era 🌱</h3>
+
+                        <p>rich folks didn't just wreck the noble class - they also destroyed the old school town merchants and small farmers. in places that aren't super industrial yet, these groups are still hanging on next to the rising rich class</p>
+
+                        <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                            <p class="mb-4">but in fully developed places, there's this new middle class that's:</p>
+                            <ul class="list-disc pl-8 space-y-2">
+                                <li>stuck between workers and rich people</li>
+                                <li>constantly getting refreshed as part of rich society</li>
+                                <li>watching their members get pushed into the working class by competition</li>
+                                <li>seeing their whole independent existence about to get deleted</li>
+                                <li>getting replaced by managers and shop workers 📉</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                <p class="font-medium mb-4">these folks actually spilled some real tea about modern production:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>exposed economists' fake explanations</li>
+                    <li>proved machines and division of labor were causing problems</li>
+                    <li>showed how wealth was concentrating in few hands</li>
+                    <li>pointed out middle class and farmer extinction</li>
+                    <li>explained worker poverty</li>
+                    <li>revealed chaotic production</li>
+                    <li>highlighted wealth gaps</li>
+                    <li>exposed nations fighting industrial wars</li>
+                    <li>showed how old moral codes and family ties were dissolving 🎯</li>
+                </ul>
+            </div>
+
+            <p>but their solution? either:</p>
+            <ul class="list-disc pl-8 space-y-2">
+                <li>go back to old production methods and old society</li>
+                <li>or force new production methods to work with old rules</li>
+            </ul>
+            <p>both plans were giving delusional energy 🤪</p>
+
+            <h3 class="text-2xl font-propaganda mt-12 mb-6">C. German Socialism: The "Not Like Other Socialists" Era 🇩🇪</h3>
+
+            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                <p>so french socialist writing was created while rich people were in power and fighting against them. then germany got the download, but at a time when their rich folks were just starting to fight against feudal control 📱</p>
+                <p class="mt-4">german philosophers were like "omg new content just dropped" and grabbed all this french literature. but they forgot one tiny detail: when these french ideas crossed the border, french social conditions didn't come with them 🤦</p>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                <p>they called this mess:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>"philosophy of action"</li>
+                    <li>"true socialism"</li>
+                    <li>"german science of socialism"</li>
+                    <li>"philosophical foundation of socialism"</li>
+                </ul>
+                <p class="mt-4">(spoiler alert: it was none of these things)</p>
+            </div>
+
+            <p>when german (especially prussian) rich folks started actually fighting against nobles and kings - aka when liberal politics got real - everything changed 😤</p>
+
+            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                <p class="mb-4">this was the perfect moment for "true" socialism to go off 💅 they started:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>throwing shade at liberal politics</li>
+                    <li>hating on representative government</li>
+                    <li>dragging market competition</li>
+                    <li>dissing press freedom</li>
+                    <li>coming for bourgeois laws</li>
+                    <li>attacking bourgeois equality</li>
+                </ul>
+            </div>
+
+            <h3 class="text-2xl font-propaganda mt-12 mb-6">The Corporate Socialist Era: Rich People Try To Fix Society 🌟</h3>
+
+            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                <p class="mb-4">this squad includes:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>economists</li>
+                    <li>charity influencers</li>
+                    <li>humanitarian clout chasers</li>
+                    <li>people starting worker wellness programs</li>
+                    <li>animal rights activists</li>
+                    <li>anti-drinking crusaders</li>
+                    <li>literally anyone with a random "fix society" podcast</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                <p class="mb-4">these corporate socialists want all the W's of modern society without any of the drama or danger. they're trying to have:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>current society minus the spicy parts that might change things</li>
+                    <li>rich people vibes without poor people existing</li>
+                    <li>"we can fix society without changing anything" mindset 🤡</li>
+                </ul>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                <p class="mb-4">everything becomes "for the workers":</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>free trade? for the workers!</li>
+                    <li>trade limits? for the workers!</li>
+                    <li>prison reform? for the workers!</li>
+                </ul>
+                <p class="mt-4 font-medium">tldr: "i'm staying rich but trust me it's best for the workers" 🤑</p>
+            </div>
+
+            <h3 class="text-2xl font-propaganda mt-12 mb-6">Wishful Thinking Socialism: The Good Vibes Only Era ✨</h3>
+
+            <p class="italic">quick disclaimer: we're not talking about the real ones who spoke up for workers during big revolutions (shoutout to babeuf and the gang) 🫡</p>
+
+            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                <p class="mb-4">they thought:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>their personal big brain ideas could replace actual historical movement</li>
+                    <li>their made-up conditions could replace real ones</li>
+                    <li>their carefully designed society could replace workers organizing themselves</li>
+                </ul>
+                <p class="mt-4">to them, future history was just about promoting their social media masterclass 🤪</p>
+            </div>
+
+            <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                <p class="mb-4">their suggestions were kinda ahead of their time:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>delete the difference between city and country life</li>
+                    <li>rethink the whole family system</li>
+                    <li>stop private business ownership</li>
+                    <li>end wage slavery</li>
+                    <li>manifest social harmony</li>
+                    <li>make the government just supervise production</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                <p class="mb-4">but to do all this imaginary stuff, they have to beg rich folks for money and support 🤡 slowly they became just like those conservative socialists we roasted earlier, but even more annoying because they're:</p>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li>super organized about being wrong</li>
+                    <li>religious about their "social science"</li>
+                </ul>
+                <p class="mt-4">they get pressed whenever workers try political action because according to them that's "not believing in the new utopia hard enough" 🙄</p>
+            </div>
+
+            <p class="font-medium">that's why the owenites in england and fourierists in france are always fighting with actual worker movements like the chartists and reformistes. major L.</p>
+        </section>
+        <section id="collab" class="mb-16">
+            <h2 class="text-3xl font-propaganda mb-8">IV. WHO COMMUNISTS COLLAB WITH RN 🤝</h2>
+            <div class="space-y-6 text-slate-700 dark:text-slate-300">
+
+                <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                    <p>section ii already spilled the tea about how communists work with existing worker groups like the chartists in england and farm reformers in america 📱</p>
+                    <p class="mt-4">communists are fighting for the immediate W's that workers need rn, but they're also thinking ahead about the long-term gameplay. it's giving present AND future energy ✨</p>
+                </div>
+
+                <h3 class="text-2xl font-propaganda mt-12 mb-6">The Server-by-Server Breakdown 🌍</h3>
+
+                <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                    <p class="font-medium mb-4">let's break down the collab situation by country:</p>
+
+                    <h4 class="font-propaganda text-xl mb-2">France 🇫🇷</h4>
+                    <p class="mb-4">teaming up with social-democrats against conservative and radical rich folks. but they're keeping it real about all that traditional french revolution propaganda - not falling for the hype 🤔</p>
+
+                    <h4 class="font-propaganda text-xl mb-2">Switzerland 🇨🇭</h4>
+                    <p class="mb-2">supporting the radicals but staying aware that this group is basically two different teams in a trench coat:</p>
+                    <ul class="list-disc pl-8 space-y-2">
+                        <li>democratic socialists (french style)</li>
+                        <li>radical rich folks</li>
+                    </ul>
+                    <p class="mt-2">major "keep your friends close but your enemies closer" energy 🎭</p>
+
+                    <h4 class="font-propaganda text-xl mb-2 mt-4">Poland 🇵🇱</h4>
+                    <p>backing the squad that says fixing farming has to come before national freedom. these are the ones who started the cracow uprising in 1846 (they understood the assignment) 💪</p>
+                </div>
+
+                <h3 class="text-2xl font-propaganda mt-12 mb-6">The German Server Meta 🇩🇪</h3>
+
+                <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                    <p class="mb-4">germany: will fight alongside rich folks when they're being revolutionary against:</p>
+                    <ul class="list-disc pl-8 space-y-2">
+                        <li>absolute monarchy</li>
+                        <li>feudal lords</li>
+                        <li>middle class basic people</li>
+                    </ul>
+                    <p class="mt-4">but plot twist - they NEVER stop reminding workers about how rich people are literally their ops. this way, german workers can use whatever social and political changes rich people make as weapons against them later. after they help defeat the reactionary squads, it's ON SIGHT with the rich folks 😤</p>
+                </div>
+
+                <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8">
+                    <p class="mb-4">communists are especially focused on germany rn because:</p>
+                    <ul class="list-disc pl-8 space-y-2">
+                        <li>it's about to have its rich people revolution</li>
+                        <li>but with way better conditions than england had in the 1600s or france in the 1700s</li>
+                        <li>and the workers are way more organized this time</li>
+                        <li>plus this rich people revolution is basically just the trailer for the worker revolution that's coming right after 🔥</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-propaganda mt-12 mb-6">The Final Strategy Guide 📖</h3>
+
+                <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8">
+                    <p class="mb-4">tldr: communists support any revolutionary movement trying to delete the current social and political system 💯</p>
+                    <ul class="list-disc pl-8 space-y-2">
+                        <li>in every movement, they make sure to bring up the property question - idc what stage it's at, we're talking about it ⚡️</li>
+                        <li>plus they're working everywhere to get all democratic groups worldwide to collab 🌐</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg my-8 border-l-4 border-red-600">
+                    <p class="font-medium">communists aren't about that subtle life. they're saying it loud: their goals can only happen by forcefully yeeting the entire current system. let the ruling class shake in their designer boots about the communist revolution.</p>
+                    <p class="mt-4">workers literally have nothing to lose except what's holding them down. but they have a whole world to gain 😤</p>
+                </div>
+
+                <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg my-8 text-center font-propaganda text-xl">
+                    <p>PROLS WORLDWIDE NEED TO LINK UP FR ‼️</p>
+                </div>
+            </div>
+        </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-black py-8 border-t border-red-600">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400 mb-2">PROLS WORLDWIDE NEED TO LINK UP FR ‼️ 🚩</p>
+            <div class="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400">
+                <span class="text-xl transform scale-x-[-1]">©</span>
+                <span class="text-sm">All Wrongs Reserved // Information Wants to be Free</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Theme toggle functionality for both desktop and mobile
+        function setupThemeToggle(buttonId) {
+            const toggleButton = document.getElementById(buttonId);
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function() {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.theme = 'light';
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.theme = 'dark';
+                    }
+                });
+            }
+        }
+
+        // Initialize theme toggles
+        setupThemeToggle('theme-toggle');
+        setupThemeToggle('theme-toggle-mobile');
+
+        // Check for saved theme preference or default to dark mode
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+</body>
+
+</html>
